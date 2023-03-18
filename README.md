@@ -1,5 +1,5 @@
-# Welcome to the lab, Mad Scientist!
+# Welcome to the lab, Mad Scientist ! :test_tube:
 
-**Fun Run Datathon** at **Prince of Songkla University (PSU)**
+**Fun Run Datathon** at **Prince of Songkla University (PSU)**<br>
 :star: [Link to Moodle](https://moodle.dida.psu.ac.th)<br>
-![Senku GIF](/assets/images/senku.gif)
+<br>![Senku GIF](/assets/images/senku.gif)<br>
