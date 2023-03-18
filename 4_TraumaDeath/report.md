@@ -18,3 +18,10 @@
     + If any of AIS = 6, ISS is automatically set at 75
     + Major truama (or polytrauma) when ISS > 15
 + Respiratory Rate
+### Ideas 
+`Problem : จงประเมินความเสี่ยงการเสียชีวิต`
++ ทำ survival analysis โดยใช้ random survival forest
+    + สามารถบอก โอกาสการเสียชีวิต ณ เวลา t ใด ๆ ได้ (t >= 0)
++ ประเมินวันเวลาที่ผู้ป่วยมีโอกาสเสียชีวิต (regression problem)
+    + ช่วยระบุวันเวลาที่ต้องทำการเฝ้าระวังเป็นพิเศษได้
+    
