@@ -15,9 +15,9 @@
                        อีกชุดคือ 3. ของคนที่ติดเชื้อ CLABSI (Central line bloodstream infection) แล้ว แสดงว่าก็คือคนที่ใส่สาย + ติดเชื้อแล้ว
 ### Ideas 
 `Problem : จงหาลักษณะของผู้ป่วยที่ต้องใส่สาย & ลักษณะของผู้ป่วยที่ติดเชื้อ & แนวทางป้องกัน`
-'AIM' ของโจทย์ : ต้องการลดค่า CLABSI rate per 1000 line-days = (number of CLABSIs ÷ total number of line-days) x 1000
-                 number of CLABSIs คือ จำนวนครั้งที่เกิด CLABSI
-                 number of line-days คือ จำนวนวันทั้งหมดของการใส่สาย เอาของทุกคนมารวมกัน ( *ทุกคนที่ใส่สาย รวมทั้งเกิดและไม่เกิด CLABSI ) 
+'AIM' ของโจทย์ : ต้องการลดค่า CLABSI rate per 1000 line-days = (number of CLABSIs ÷ total number of line-days) x 1000  
+                 number of CLABSIs คือ จำนวนครั้งที่เกิด CLABSI  
+                 number of line-days คือ จำนวนวันทั้งหมดของการใส่สาย เอาของทุกคนมารวมกัน ( *ทุกคนที่ใส่สาย รวมทั้งเกิดและไม่เกิด CLABSI )  
 + ทำ classification + feature importance ของแต่ละ task
     + ทำให้ทราบถึงลักษณะสำคัญของผู้ป่วยแต่ละประเภทได้
 + นำ importance feature (ตัวแปรสำคัญ) ที่ได้มาหาแนวทางป้องกัน
