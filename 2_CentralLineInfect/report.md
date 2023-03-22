@@ -14,7 +14,7 @@
 ### Ideas 
 `Problem : จงหาลักษณะของผู้ป่วยที่ต้องใส่สาย & ลักษณะของผู้ป่วยที่ติดเชื้อ & แนวทางป้องกัน`<br>
 `AIM ของโจทย์ : ต้องการลดค่า CLABSI rate per 1000 line-days = (number of CLABSIs ÷ total number of line-days) x 1000`<br>
-โดย number of CLABSIs คือ จำนวนครั้งที่เกิด CLABSI
+โดย number of CLABSIs คือ จำนวนครั้งที่เกิด CLABSI<br>
 และ number of line-days คือ จำนวนวันทั้งหมดของการใส่สาย เอาของทุกคนมารวมกัน (ทุกคนที่ใส่สาย รวมทั้งเกิดและไม่เกิด CLABSI)
 + ทำ classification + feature importance ของแต่ละ task
     + ทำให้ทราบถึงลักษณะสำคัญของผู้ป่วยแต่ละประเภทได้
