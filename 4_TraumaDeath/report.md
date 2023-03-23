@@ -26,7 +26,7 @@
 - ทำ survival analysis ได้กราฟ โอกาสที่จะอยู่รอด ณ เวลา t ใด ๆ ของคน ๆ นั้นมา
 - นำทั้งหมดมาใช้ คือใช้กราฟ survival มาเป็นพื้นหลัง แล้ว plot จุดไปที่วันที่ discharge ที่ regressor เรา predict ได้ กับวันที่ discharge จริงจากฐานข้อมูล พร้อมกับระบุว่าออกไปด้วย class (outcome) แบบใด
 
-<br>![Final Graph](images/final_graph.png)<br>
+<br>![Final Graph](/assets/images/4_TraumaDeath/final_graph.png)<br>
 
 - คราวนี้เราก็เอามาสรุปได้ว่า จากกราฟ survival ที่แสดงถึงโอกาสการรอดชีวิต ณ เวลา t ใด ๆ นับตั้งแต่เข้ารักษา regression model ของเรา predict ได้ว่า ผู้ป่วยจะ discharge ออกจาก รพ. วันที่ 7 ซึ่งมีโอกาสรอดชีวิต 50% ด้วย outcome ที่ predict จาก classification model ว่าเป็นแบบ recovery
 - ซึ่งเทียบกับผลลัพธ์จริงจากฐานข้อมูล ที่ผู้ป่วย discharge ออกจาก รพ. หลังผ่านไป 6 วัน ที่โอกาสรอดชีวิตเท่ากับ 60% ด้วย outcome แบบ recovery
