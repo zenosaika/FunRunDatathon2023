@@ -12,11 +12,25 @@
 > 7. ข้อมูลการให้เลือด
 > 8. ข้อมูล Blood gas
 ### Ideas
-`Problem : จงประเมินความเสี่ยงการเสียชีวิต`
-+ ทำ survival analysis โดยใช้ random survival forest
-    + สามารถบอก โอกาสการเสียชีวิต ณ เวลา t ใด ๆ ได้ (t >= 0)
-+ ประเมินวันเวลาที่ผู้ป่วยมีโอกาสเสียชีวิต (regression problem)
-    + ช่วยระบุวันเวลาที่ต้องทำการเฝ้าระวังเป็นพิเศษได้
+`Problem : ให้ predict ว่าผู้ป่วยตอน discharge ออกจาก รพ. มี class แบบใด (multiclass) โดยใช้แค่ผลการวินิจฉัยผู้ป่วยตอนมาถึง รพ. เท่านั้น (เพราะต้องการทราบ outcome ของผู้ป่วยตั้งแต่เนิ่น ๆ เลย)`
+1. Preprocessing
+    - Feature Engineering
+        - data encoding (เช่น onehot)
+        - data creation (แบบ paper ที่เราอ่านกัน)
+        - scaling, normalization, standardization 
+        - etc.
+    - shuffle then split data
+2. เพราะ target คือ predict ว่าตอน discharge ออกจาก รพ. ผู้ป่วยจะมี outcome แบบไหน โดยใช้ข้อมูลจากการวินิจฉัยแค่ที่มีตอนเข้ารักษาวันแรกเท่านั้น ไม่ได้ใช้ข้อมูลทั้งหมด ดังนั้น
+- เราจะเทรน regression model มา predict จำนวนวันที่ผู้ป่วยจะอยู่ รพ. จน discharge (ใช้แค่ data ที่ตรวจตอนมาถึง รพ. ครั้งแรกมาเทรน)
+- เทรน classification model โดยใช้ data แค่ที่ตรวจตอนมาถึง รพ. ครั้งแรก บวกกับ จำนวนวันที่อยู่ รพ. จน discharge ซึ่งจะ predict เป็น class ออกมา (multiclass) 
+- ทำ survival analysis ได้กราฟ โอกาสที่จะอยู่รอด ณ เวลา t ใด ๆ ของคน ๆ นั้นมา
+- นำทั้งหมดมาใช้ คือใช้กราฟ survival มาเป็นพื้นหลัง แล้ว plot จุดไปที่วันที่ discharge ที่ regressor เรา predict ได้ กับวันที่ discharge จริงจากฐานข้อมูล พร้อมกับระบุว่าออกไปด้วย class (outcome) แบบใด
+
+<br>![Final Graph](images/final_graph.png)<br>
+
+- คราวนี้เราก็เอามาสรุปได้ว่า จากกราฟ survival ที่แสดงถึงโอกาสการรอดชีวิต ณ เวลา t ใด ๆ นับตั้งแต่เข้ารักษา regression model ของเรา predict ได้ว่า ผู้ป่วยจะ discharge ออกจาก รพ. วันที่ 7 ซึ่งมีโอกาสรอดชีวิต 50% ด้วย outcome ที่ predict จาก classification model ว่าเป็นแบบ recovery
+- ซึ่งเทียบกับผลลัพธ์จริงจากฐานข้อมูล ที่ผู้ป่วย discharge ออกจาก รพ. หลังผ่านไป 6 วัน ที่โอกาสรอดชีวิตเท่ากับ 60% ด้วย outcome แบบ recovery
+- สรุปได้ว่าโมเดลของเรามีความแม่นยำ ... % จากการใช้แค่ข้อมูลจากการวินิจฉัยตอนผู้ป่วยมาถึง รพ.
 ### Relative Factors
 + Glasgow Coma Scale (GCS) is used to describe the level of consciousness
     + E - Eye Opening Response (Max 4)

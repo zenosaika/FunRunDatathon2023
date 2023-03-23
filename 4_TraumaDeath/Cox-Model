@@ -36,7 +36,7 @@ x_new
 
 
 import numpy as np
-%matplotlib inline
+# %matplotlib inline
 import matplotlib.pyplot as plt
 
 pred_surv = estimator.predict_survival_function(x_new)

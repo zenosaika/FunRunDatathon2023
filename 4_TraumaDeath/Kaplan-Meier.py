@@ -3,7 +3,7 @@ from sksurv.datasets import load_veterans_lung_cancer
 data_x, data_y = load_veterans_lung_cancer()
 
 
-%matplotlib inline
+# %matplotlib inline
 import matplotlib.pyplot as plt
 from sksurv.nonparametric import kaplan_meier_estimator
 
