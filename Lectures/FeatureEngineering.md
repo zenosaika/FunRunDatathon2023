@@ -9,7 +9,7 @@
     - Removal ลบทิ้งไปเลย ถ้ามันไม่หายไปหลาย sample เกิน
     - Replacing Value เปลี่ยนค่าเป็นค่า default เลย (ทำเหมือน imputation)
     - Capping สุ่มค่าจาก sample อื่นมาใส่แทน
-    - Discretization ไม่เข้าใจ
+    - Discretization เป็นการเปลี่ยน continous variable ให้เป็น categorical เช่น การแบ่งเป็นช่วง จากอายุมีค่า ได้ 1-100 เป็นกลุ่ม 1-20 21-40 แล้วแต่ละช่วงแทนด้วยค่าเดียวเป็นต้น
     - ปัญหาของ outlier คือแบบสมมุติทำ linear regression เจ้า outlier มันมีแรงดึงมากกว่าชาวบ้านเขา จะทำให้กราฟมันเอียงไปหา outlier
 - Log Transform - handle skew data.
     - data['column_name] = np.log(data['column_name'])
