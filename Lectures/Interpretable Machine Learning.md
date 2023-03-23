@@ -1,6 +1,6 @@
 Interpretability of modelling
 ![figure_2_fix](https://user-images.githubusercontent.com/128203147/227242463-b711faea-e3e4-45ec-90f7-4c59958d0009.png)
-
+*** อันนี้สำคัญ การที่เราบอกได้ว่า ทำไม model ถึง predict แบบนี้ไม่สามารถสรุปได้ว่า สิ่งที่มันใช้ predict จะเป็นสิ่งที่เป็นเหตุของ output จริงๆ เช่น รถสีสองประตู จะทำนายความเร็วได้สูงกว่า มันเพราะรถสองประตตูมักจะเป็นรถหรู ไม่ใช่สองประตูทำให้ความเร็วเพิ่ม
 
 ธรรมชาติของโมเดล
 Intrinsically explainable - An intrinsically explainable model is designed to be simple and transparent enough that we can get a sense for how it works by looking at its structure, e.g. simple regression models and small decision trees. These models are directly interpretable.
